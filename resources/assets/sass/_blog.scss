@@ -103,7 +103,7 @@ body {
   color: lighten($brand-black,20%);
   background: $brand-white;
 }
-#page {
+#app {
   position: relative;
   overflow-x: hidden;
   width: 100%;
@@ -197,74 +197,19 @@ h1, h2, h3, h4, h5, h6, figure {
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 2px;
+      & :hover {
+        color: #F6490D !important;
+      }
+      &.active {
+        a {
+          color: #F6490D !important;
+        }
+      }
       a {
         position: relative;
         font-size: 12px;
         padding: 10px 15px;
-        color: rgba(0,0,0,.7);
-        @include transition(.5s);
-
-        &:hover{
-          color: $brand-primary;
-        }
-      }
-      &.has-dropdown {
-        position: relative;
-        .dropdown {
-          width: 140px;
-          -webkit-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
-          -moz-box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
-          box-shadow: 0px 14px 33px -9px rgba(0,0,0,0.75);
-          z-index: 1002;
-          visibility: hidden;
-          opacity: 0;
-          position: absolute;
-          top: 40px;
-          left: 0;
-          text-align: left;
-          background: $brand-black;
-          padding: 20px;
-          @include border-radius(4px);
-          @include transition(.0s);
-          &:before {
-            bottom: 100%;
-            left: 40px;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-bottom-color: #000;
-            border-width: 8px;
-            margin-left: -8px;
-          }
-
-          li {
-            display: block;
-            margin-bottom: 7px;
-            &:last-child {
-              margin-bottom: 0;
-            }
-            a {
-              padding: 2px 0;
-              display: block;
-              color: lighten($brand-black, 60%);
-              line-height: 1.2;
-              text-transform: none;
-              font-size: 13px;
-              letter-spacing: 0;
-              &:hover {
-                color: $brand-white;
-              }
-            }
-          }
-        }
-        &:hover, &:focus {
-          a {
-            color: $brand-primary;
-          }
-        }
+        color: rgba(0,0,0,7);
       }
       &.btn-cta {
         a {
@@ -283,18 +228,6 @@ h1, h2, h3, h4, h5, h6, figure {
               -moz-box-shadow: 0px 14px 20px -9px rgba(0,0,0,0.75);
               box-shadow: 0px 14px 20px -9px rgba(0,0,0,0.75);
             }
-          }
-        }
-      }
-      &.active {
-        > a {
-          color: $brand-primary!important;
-          position: relative;
-
-          &:after{
-            opacity: 1;
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
           }
         }
       }
@@ -1578,48 +1511,27 @@ input[type="text"] {
   .offcanvas & {
     @include translateX(0px);
   }
-  a {
-    color: rgba(255,255,255,.5);
-    &:hover {
-      color: rgba(255,255,255,.8);
-    }
-  }
   ul {
     padding: 0;
     margin: 0;
     li {
+      a {
+        color: rgba(255,255,255,.5);
+      }
+      & :hover {
+        color: #F6490D !important;
+      }
+      &.active {
+        a {
+          color: #F6490D !important;
+        }
+      }
       padding: 0;
       margin: 0;
       list-style: none;
       > ul {
         padding-left: 20px;
         display: none;
-      }
-      &.offcanvas-has-dropdown {
-        > a {
-          display: block;
-          position: relative;
-          &:after {
-            position: absolute;
-            right: 0px;
-            //@include icomoon;
-            content: "\e0c5";
-            font-size: 20px;
-            color: rgba(255,255,255,.2);
-            @include transition(.5s);
-          }
-        }
-        &.active {
-          a {
-            &:after {
-              -webkit-transform: rotate(-180deg);
-              -moz-transform: rotate(-180deg);
-              -ms-transform: rotate(-180deg);
-              -o-transform: rotate(-180deg);
-              transform: rotate(-180deg);
-            }
-          }
-        }
       }
     }
   }
@@ -1941,6 +1853,7 @@ input[type="text"] {
   height: 100%;
   z-index: 9999;
   background: url('../images/loader.gif') center no-repeat #fff;
+  @include transition(.5s);
 }
 .animate-box {
   .js & {
@@ -2065,4 +1978,49 @@ input[type="text"] {
 
 .navbar-nav > li > a :hover {
   color: $brand-primary !important;
+}
+
+.top-menu {
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
+  z-index: 999;
+}
+
+.text-main {
+  color: #e6e6e6;
+  font-family: "Lora", Georgia, serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+
+.jumbotron{
+  &.jumbotron-fluid {
+    margin-top: 80px ;
+    background-color: #333;
+    @media screen and (max-width: $screen-sm ) {
+      margin-top: 90px ;
+    }
+  }
+}
+
+.h1, h2, h3, h4, h5, h6, figure {
+  color: #e6e6e6;
+  font-family: "Lora", Georgia, serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+
+.nav-bar-active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.3);
+  z-index: 200;
+  padding: 50px 0;
+  display: none;
 }

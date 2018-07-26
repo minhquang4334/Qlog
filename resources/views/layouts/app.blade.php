@@ -27,6 +27,7 @@
     </script>
 
     @yield('styles')
+    @yield('css')
 </head>
 <body>
     <div class="colorlib-loader"></div>
@@ -57,7 +58,7 @@
     <script src="{{ mix('js/main.js') }}"></script>
 
     @yield('scripts')
-
+    @yield('styles')
     <script>
         $(function () {
             $("[data-toggle='tooltip']").tooltip();

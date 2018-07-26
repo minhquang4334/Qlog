@@ -21,8 +21,8 @@
     </div>
 </nav>--}}
 
-<nav class="colorlib-nav" role="navigation">
-    <div class="top-menu">
+<nav class="colorlib-nav top-menu" role="navigation">
+    <div class="top-menu" id="navBar">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2 col-xs-2">
@@ -31,19 +31,12 @@
                 <div class="col-md-10 col-xs-10 text-right menu-1">
                     <ul>
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li class="has-dropdown">
+                        <li class="">
                             <a href="blog.html">Blog</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Commercial</a></li>
-                                <li><a href="#">Apartment</a></li>
-                                <li><a href="#">House</a></li>
-                                <li><a href="#">Building</a></li>
-                            </ul>
                         </li>
                         <li><a href="lifestyle.html">Lifestyle</a></li>
                         <li><a href="travels.html">Travels</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About Me</a></li>
                     </ul>
                 </div>
             </div>

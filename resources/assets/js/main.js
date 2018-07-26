@@ -45,7 +45,7 @@
 
   var offcanvasMenu = function() {
 
-    $('#app').prepend('<div id="colorlib-offcanvas" />');
+    $('#app').prepend('<div id="colorlib-offcanvas"/>');
     $('#app').prepend('<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle colorlib-nav-white"><i></i></a>');
     var clone1 = $('.menu-1 > ul').clone();
     $('#colorlib-offcanvas').append(clone1);
@@ -56,7 +56,6 @@
     $('#colorlib-offcanvas')
       .find('li')
       .removeClass('has-dropdown');
-
     // Hover dropdown menu on mobile
     $('.offcanvas-has-dropdown').mouseenter(function(){
       var $this = $(this);
@@ -81,7 +80,6 @@
 
         $('body').removeClass('offcanvas');
         $('.js-colorlib-nav-toggle').removeClass('active');
-
       }
     });
   };
@@ -192,7 +190,9 @@
 
   // Loading page
   var loaderPage = function() {
-    $(".colorlib-loader").fadeOut("slow");
+    $(".colorlib-loader").fadeOut(1000, () => {
+      $('body').css('background-color', '#fff')
+    });
   };
 
 
