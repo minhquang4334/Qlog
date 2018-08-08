@@ -24,7 +24,7 @@
 <nav class="colorlib-nav top-menu" role="navigation">
     <div class="top-menu" id="navBar">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row font-size-16">
                 <div class="col-md-2 col-xs-2">
                     <div id="colorlib-logo"><a href="index.html">Article.</a></div>
                 </div>

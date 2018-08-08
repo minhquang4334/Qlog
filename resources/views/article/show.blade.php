@@ -4,9 +4,9 @@
 
 @section('content')
     @component('particals.jumbotron')
-        <h4>{{ $article->title }}</h4>
+        <h3>{{ $article->title }}</h3>
 
-        <h6>{{ $article->subtitle }}</h6>
+        <h5>{{ $article->subtitle }}</h5>
 
         <div class="header">
             <i class="fas fa-user"></i>{{ $article->user->name or 'null' }}，
@@ -22,9 +22,9 @@
 
     <div class="article container">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-8 offset-md-2 show-content">
 
-            <parse content="{{ $article->content['raw'] }}"></parse>
+            <parse content="{{ $article->content['raw'] }}" class="font-content first-letra" id="first-p"></parse>
 
             @if($article->is_original)
                 <div class="publishing alert alert-dismissible alert-info">
@@ -64,5 +64,15 @@
 @section('scripts')
     <script>
         hljs.initHighlightingOnLoad();
+        $(document).ready(function () {
+          let firstP = $('#first-p').find("p:first-child").first();
+          firstP.addClass('first-p-element');
+        })
     </script>
+@endsection
+
+@section('styles')
+    <style>
+
+    </style>
 @endsection

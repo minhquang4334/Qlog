@@ -38,7 +38,7 @@
             @yield('content')
         </div>
 
-        @include('particals.footer')
+        {{--@include('particals.footer')--}}
     </div>
 
     <!-- Scripts -->
