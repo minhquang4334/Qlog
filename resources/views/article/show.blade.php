@@ -25,7 +25,7 @@
             <div class="col-md-8 offset-md-2 show-content">
 
             <parse content="{{ $article->content['raw'] }}" class="font-content first-letra" id="first-p"></parse>
-
+                <script src="https://gist.github.com/minhquang4334/599d93ba386cc89a7bd2984365f1e225.js"></script>
             @if($article->is_original)
                 <div class="publishing alert alert-dismissible alert-info">
                     <button type="button" class="close" data-dismiss="alert">×</button>

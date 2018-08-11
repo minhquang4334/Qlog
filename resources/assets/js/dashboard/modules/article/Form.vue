@@ -147,9 +147,15 @@ export default {
 
     this.simplemde = new SimpleMDE({
       element: document.getElementById("editor"),
+      autoDownloadFontAwesome: true,
       placeholder: t('form.content_placeholder', { type: t('form.article') }),
       autoDownloadFontAwesome: true,
       forceSync: true,
+      renderingConfig: {
+        codeSyntaxHighlighting: true,
+      },
+      tabSize: 4,
+      showIcons: ["code", "table"],
       previewRender(plainText, preview) {
         preview.className += ' markdown'
 

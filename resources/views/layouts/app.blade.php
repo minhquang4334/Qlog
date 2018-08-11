@@ -53,10 +53,11 @@
     <script src="/js/jquery.flexslider-min.js"></script>
     <!-- Owl carousel -->
     <script src="/js/owl.carousel.min.js"></script>
+    {{--<script src="https://cdn.jsdelivr.net/highlight.js/latest/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/latest/styles/github.min.css">--}}
     <!-- Magnific Popup -->
     <script src="{{ mix('js/home.js') }}"></script>
     <script src="{{ mix('js/main.js') }}"></script>
-
     @yield('scripts')
     @yield('styles')
     <script>

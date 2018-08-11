@@ -2078,14 +2078,19 @@ input[type="text"] {
 }
 
 .list-unstyled{
-  background: #fafafa;
+  background: #fff;
   list-style: none;
 }
 
 .show-content {
-  background: #fafafa;
-  padding-top: 20px;
+  background: #fff;
+  padding: 16px;
+  margin-top: 20px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.21);
+  border-left: 4px solid transparent;
+
 }
+
 
 .jumbotron {
   .h1, h2, h3, h4, h5, h6, figure {
