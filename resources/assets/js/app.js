@@ -12,7 +12,7 @@ import VueRouter from 'vue-router';
 import store from './vuex/store.js';
 import VueI18n from 'vue-i18n';
 import 'vue-multiselect/dist/vue-multiselect.min.css';
-
+import postscribe from 'postscribe'
 import router from './router'
 import locales from 'lang';
 

@@ -35,8 +35,6 @@
           $('.js-colorlib-nav-toggle').removeClass('active');
 
         }
-
-
       }
     });
 
@@ -100,6 +98,19 @@
 
     });
   };
+
+  let scrollDownHideNavMenu = function() {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > (currentScrollPos + 100)) {
+        document.getElementById("navBar").style.top = "0";
+      } else {
+        document.getElementById("navBar").style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  }
 
 
   /*var contentWayPoint = function() {
@@ -271,6 +282,7 @@
     dropdown();
     goToTop();
     loaderPage();
+    //scrollDownHideNavMenu();
     // owlCrouselFeatureSlide();
   });
 
