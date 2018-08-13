@@ -100,16 +100,8 @@
   };
 
   let scrollDownHideNavMenu = function() {
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > (currentScrollPos + 100)) {
-        document.getElementById("navBar").style.top = "0";
-      } else {
-        document.getElementById("navBar").style.top = "-100px";
-      }
-      prevScrollpos = currentScrollPos;
-    }
+
+
   }
 
 
@@ -280,9 +272,9 @@
     // contentWayPoint();
     // sliderMain();
     dropdown();
-    goToTop();
+    //goToTop();
     loaderPage();
-    //scrollDownHideNavMenu();
+    scrollDownHideNavMenu();
     // owlCrouselFeatureSlide();
   });
 

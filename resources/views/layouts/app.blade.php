@@ -68,6 +68,43 @@
 
     </script>
 
+    <script>
+      var didScroll;
+      var lastScrollTop = 0;
+      var delta = 5;
+      var navbarHeight = $('#navBar').outerHeight();
+      $('#app').scroll(function(event){
+        didScroll = true;
+      });
+      setInterval(function() {
+        if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+        }
+      }, 250);
+
+      function hasScrolled() {
+        let st = $('#app').scrollTop();
+        console.log('st: ', st)
+        console.log('navbarHeight: ', navbarHeight)
+        console.log('lastScrollTop: ', lastScrollTop)
+        // Make sure they scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastScrollTop && st > navbarHeight){
+          // Scroll Down
+          $('#navBar').css('top', '-100px')
+        } else {
+          // Scroll Up
+          $('#navBar').css('top', '0')
+        }
+
+        lastScrollTop = st;
+      }
+    </script>
+
     @if(config('blog.google.open'))
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

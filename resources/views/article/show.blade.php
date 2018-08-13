@@ -3,7 +3,7 @@
 @section('title', $article->title)
 
 @section('content')
-    @component('particals.jumbotron')
+    {{--@component('particals.jumbotron')
         <h3>{{ $article->title }}</h3>
 
         <h5>{{ $article->subtitle }}</h5>
@@ -18,7 +18,7 @@
             @endif
             <i class="fas fa-clock"></i>{{ $article->published_at->diffForHumans() }}
         </div>
-    @endcomponent
+    @endcomponent--}}
 
     <div class="article container">
         <div class="row">
