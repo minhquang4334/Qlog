@@ -165,6 +165,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
   .top-menu{
     padding: 10px 30px;
+    transition: top 0.3s ease-in-out;
     @media screen and (max-width: $screen-sm ) {
       padding: 28px 1em;
     }
@@ -1654,12 +1655,10 @@ input[type="text"] {
   background: $brand-white;
 }
 .colorlib-nav-toggle {
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 65px;
-  z-index: 21;
   padding: 6px 0 0 0;
-  display: block;
   margin: 0 auto;
   display: none;
   // background: #f86942;
@@ -2036,14 +2035,14 @@ input[type="text"] {
 
 .font-content {
   p {
-    font-family: "Open Sans", Segoe UI,Helvetica Neue,Arial,sans-serif;
-    line-height: 1.75;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.9;
     text-align: left;
     font-style: normal;
     --x-height-multiplier: 0.375;
     --baseline-multiplier: 0.17;
     font-size: 1.1em;
-    font-weight: 400;
+    font-weight: 330;
     color: rgba(0,0,0,.84);
     letter-spacing: -.006em;
   }
@@ -2068,9 +2067,10 @@ input[type="text"] {
   &:first-child:first-letter {
     color: $brand-black;
     float: left;
-    font-family: "Open Sans", Segoe UI,Helvetica Neue,Arial,sans-serif;
-    font-size: 110px;
+    font-family: Georgia;
+    font-size: 115px;
     line-height: 90px;
+    font-weight: 400;
     padding-top: 4px;
     padding-right: 8px;
     padding-left: 3px;
@@ -2086,9 +2086,13 @@ input[type="text"] {
   background: #fff;
   padding: 16px;
   margin-top: 20px;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.21);
+  @media screen and (max-width: $screen-sm ) {
+    margin-top: 0 ;
+    border-radius: 0;
+  }
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
   border-left: 4px solid transparent;
-
+  border-radius: 5px;
 }
 
 

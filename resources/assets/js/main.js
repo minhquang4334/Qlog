@@ -35,8 +35,6 @@
           $('.js-colorlib-nav-toggle').removeClass('active');
 
         }
-
-
       }
     });
 
@@ -100,6 +98,11 @@
 
     });
   };
+
+  let scrollDownHideNavMenu = function() {
+
+
+  }
 
 
   /*var contentWayPoint = function() {
@@ -269,8 +272,9 @@
     // contentWayPoint();
     // sliderMain();
     dropdown();
-    goToTop();
+    //goToTop();
     loaderPage();
+    scrollDownHideNavMenu();
     // owlCrouselFeatureSlide();
   });
 
