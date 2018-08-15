@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <form class="col-sm-9 offset-sm-1" @submit.prevent="onSubmit">
+    <form class="col-sm-11" @submit.prevent="onSubmit">
       <div class="col-sm-12">
         <div class="form-group row">
           <label class="col-sm-2 col-form-label">{{ $t('form.category') }}</label>
@@ -147,7 +147,6 @@ export default {
 
     this.simplemde = new SimpleMDE({
       element: document.getElementById("editor"),
-      autoDownloadFontAwesome: true,
       placeholder: t('form.content_placeholder', { type: t('form.article') }),
       autoDownloadFontAwesome: true,
       forceSync: true,

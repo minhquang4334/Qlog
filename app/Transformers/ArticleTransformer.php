@@ -3,6 +3,7 @@
 namespace App\Transformers;
 
 use App\Article;
+use Carbon\Carbon;
 use League\Fractal\TransformerAbstract;
 
 class ArticleTransformer extends TransformerAbstract

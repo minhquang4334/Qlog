@@ -1,5 +1,5 @@
-    <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="{{ config('blog.default_icon') }}">
 
     <title>@yield('title', config('app.name'))</title>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    {{--<link rel="stylesheet" href="{{ mix('css/app.css') }}">--}}
     <link rel="stylesheet" href="{{ mix('css/home.css') }}">
     <link rel="stylesheet" href="{{ mix('css/themes/' . config('blog.color_theme') . '.css') }}">
 
@@ -34,8 +34,13 @@
     <div id="app">
         @include('particals.navbar')
 
-        <div class="main">
-            @yield('content')
+        <div class="main d-flex">
+            <div class="col-md-7 offset-md-1">
+                @yield('content')
+            </div>
+            <div class="col-md-3 right-content">
+                @yield('right-content')
+            </div>
         </div>
 
         {{--@include('particals.footer')--}}
@@ -85,9 +90,6 @@
 
       function hasScrolled() {
         let st = $('#app').scrollTop();
-        console.log('st: ', st)
-        console.log('navbarHeight: ', navbarHeight)
-        console.log('lastScrollTop: ', lastScrollTop)
         // Make sure they scroll more than delta
         if(Math.abs(lastScrollTop - st) <= delta)
           return;

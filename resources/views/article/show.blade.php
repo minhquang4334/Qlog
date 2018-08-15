@@ -22,7 +22,7 @@
 
     <div class="article container">
         <div class="row">
-            <div class="col-md-8 offset-md-2 show-content">
+            <div class="col-md-12 show-content">
 
                 <parse content="{{ $article->content['raw'] }}" class="font-content first-letra" id="first-p"></parse>
 {{--

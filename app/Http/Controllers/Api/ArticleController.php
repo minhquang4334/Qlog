@@ -83,7 +83,6 @@ class ArticleController extends ApiController
         $this->article->update($id, $data);
 
         $this->article->syncTag(json_decode($request->get('tags')));
-
         return $this->response->withNoContent();
     }
 

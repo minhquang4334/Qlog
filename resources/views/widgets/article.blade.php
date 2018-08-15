@@ -1,12 +1,12 @@
 <div class="container list">
     <div class="row">
-        <ul class="list-unstyled col-md-10 offset-md-1">
+        <ul class="list-unstyled full-with">
             @forelse($articles as $article)
             <li class="media">
                 @if($article->page_image)
-                <a class="media-left mr-3" href="{{ url($article->slug) }}">
-                    <img alt="{{ $article->slug }}" src="{{ $article->page_image }}" data-holder-rendered="true">
-                </a>
+                <div class="media-left mr-3">
+                    <div style="background-image: url({{ $article->page_image }})" class="post-card-image"> </div>
+                </div>
                 @endif
                 <div class="media-body">
                     <h6 class="media-heading">
@@ -28,9 +28,9 @@
                         @endforeach
 
                         <div class="info">
-                            <i class="fas fa-user"></i>{{ $article->user->name or 'null' }}&nbsp;,&nbsp;
-                            <i class="fas fa-clock"></i>{{ $article->published_at->diffForHumans() }}&nbsp;,&nbsp;
-                            <i class="fas fa-eye"></i>{{ $article->view_count }}
+                            {{--<i class="fas fa-user"></i><span class="text-info">{{ $article->user->name or 'null' }}&nbsp;</span>--}}
+                            <i class="fas fa-clock"></i><span class="text-info">{{ $article->published_at->diffForHumans(\Carbon\Carbon::now(), false, false) }}</span>
+                            <i class="fas fa-eye"></i><span class="text-info">{{ $article->view_count }}</span>
                             <a href="{{ url($article->slug) }}" class="float-right">
                                 Read More <i class="fas fa-chevron-right"></i>
                             </a>

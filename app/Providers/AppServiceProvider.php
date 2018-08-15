@@ -6,6 +6,7 @@ use App\Article;
 use App\Discussion;
 use App\Tools\FileManager\BaseManager;
 use App\Tools\FileManager\UpyunManager;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -19,9 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $lang = config('app.locale') != 'zh_cn' ? config('app.locale') : 'zh';
-        \Carbon\Carbon::setLocale($lang);
-
+        $lang = config('app.time_locale') != 'vi-VN' ? config('app.time_locale') : 'vi';
+        Carbon::setLocale($lang);
         Relation::morphMap([
             'discussions' => Discussion::class,
             'articles'    => Article::class,
