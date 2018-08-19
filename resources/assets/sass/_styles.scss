@@ -76,6 +76,7 @@ i.large {
 .main {
   margin-bottom: 30px;
   margin-top: 60px;
+
 }
 
 // Article Show Page
@@ -446,6 +447,7 @@ i.large {
 
 .list {
   .media {
+    position: relative;
     background: #fff 50%;
     background-size: cover;
     box-shadow: 0 0 10px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.02);
@@ -506,6 +508,10 @@ i.large {
         margin-top: 15px;
 
         .info {
+          position: absolute;
+          bottom: 20px;
+          height: 30px;
+          line-height: 20px;
           color: $peter-river;
           font-size: 1em;
 
@@ -728,6 +734,9 @@ img.emojione {
 }
 // Notifications
 
+.margin-right20 {
+  margin-right: 20px !important;
+}
 
 
 

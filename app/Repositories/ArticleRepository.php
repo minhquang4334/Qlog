@@ -44,6 +44,15 @@ class ArticleRepository
     }
 
     /**
+     * Get latest articles
+     * @return collection
+     */
+
+    public function getLatest() {
+        $this->model = $this->checkAuthScope();
+        return $this->model->orderBy('created_at', 'desc')->take(config('blog.article.numberInNav'))->get();
+    }
+    /**
      * Get the page of articles without draft scope.
      *
      * @param  integer $number
@@ -51,6 +60,8 @@ class ArticleRepository
      * @param  string  $sortColumn
      * @return collection
      */
+
+
     public function page($number = 10, $sort = 'desc', $sortColumn = 'created_at')
     {
         $this->model = $this->checkAuthScope();

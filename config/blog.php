@@ -38,9 +38,10 @@ return [
     'article' => [
         'title'       => 'Minh Quang đại đế',
         'description' => 'http://example.com',
-        'number'      => 10,
+        'number'      => 5,
         'sort'        => 'desc',
         'sortColumn'  => 'published_at',
+        'numberInNav' => 4
     ],
 
     // Discussion Page

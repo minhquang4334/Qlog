@@ -30,7 +30,7 @@
                         <div class="info">
                             {{--<i class="fas fa-user"></i><span class="text-info">{{ $article->user->name or 'null' }}&nbsp;</span>--}}
                             <i class="fas fa-clock"></i><span class="text-info">{{ $article->published_at->diffForHumans(\Carbon\Carbon::now(), false, false) }}</span>
-                            <i class="fas fa-eye"></i><span class="text-info">{{ $article->view_count }}</span>
+                            <i class="fas fa-eye"></i><span class="text-info margin-right20">{{ $article->view_count }}</span>
                             <a href="{{ url($article->slug) }}" class="float-right">
                                 Read More <i class="fas fa-chevron-right"></i>
                             </a>
