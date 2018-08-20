@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    @if(Auth::guest())
+    {{--@if(Auth::guest())
         <comment title="评论"
                  commentable-type="articles"
                  commentable-id="{{ $article->id }}"></comment>
@@ -59,7 +59,7 @@
                  commentable-type="articles"
                  commentable-id="{{ $article->id }}"
                  can-comment></comment>
-    @endif
+    @endif--}}
 
 @endsection
 

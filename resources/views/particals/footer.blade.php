@@ -23,13 +23,10 @@
                     </li>
                     @endif
                 </ul>
-                <div class="links">
-                    <a href="{{ url('link') }}">{{ lang('Links') }}</a>
-                </div>
             </div>
         </div>
     </div>
-    <div class="copy-right text-center">
-        <span>{!! config('blog.footer.meta') !!}</span>
-    </div>
+    {{--<div class="copy-right text-center">--}}
+        {{--<span>{!! config('blog.footer.meta') !!}</span>--}}
+    {{--</div>--}}
 </footer>

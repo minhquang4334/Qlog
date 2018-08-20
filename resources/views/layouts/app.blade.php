@@ -30,22 +30,19 @@
     @yield('css')
 </head>
 <body>
-    <div id="layout">
-        <div class="colorlib-loader"></div>
-        <div id="app">
-            @include('particals.navbar')
+    <div class="colorlib-loader"></div>
+    <div id="app">
+        @include('particals.navbar')
 
-            <div class="main d-flex">
-                <div class="col-md-7 col-sm-12 offset-md-1">
-                    @yield('content')
-                </div>
-                <div class="col-md-3 col-sm-12 right-content">
-                    @include('particals.rightnavbar')
-                </div>
+        <div class="main d-flex">
+            <div class="col-md-7 col-sm-12 offset-md-1 col-lg-6 offset-lg-2 margin-right20">
+                @yield('content')
             </div>
-
-            {{--@include('particals.footer')--}}
+            <div class="col-md-3 col-sm-12 right-content col-lg-2">
+                @include('particals.rightnavbar')
+            </div>
         </div>
+            @include('particals.footer')
     </div>
 
     <!-- Scripts -->
@@ -81,12 +78,9 @@
       let delta = 5;
       let navbarHeight = $('#navBar').outerHeight();
 
-      let layout = $('#layout').get(0);
-      $(layout).scroll(function(e) {
-        console.log(1);
+      $(window).scroll(function(e) {
         didScroll = true;
       });
-      console.log('layout: ', layout)
 
       setInterval(function() {
         if (didScroll) {
@@ -96,7 +90,7 @@
       }, 100);
 
       function hasScrolled() {
-        let st = $('#layout').scrollTop();
+        let st = $(window).scrollTop();
         // Make sure they scroll more than delta
         if(Math.abs(lastScrollTop - st) <= delta)
           return;
