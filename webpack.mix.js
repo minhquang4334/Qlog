@@ -1,6 +1,7 @@
 const { mix } = require('laravel-mix');
 const path = require('path');
-
+let webpackPlugins = require('laravel-mix').plugins;
+let SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -32,12 +33,40 @@ mix.webpackConfig({
       path.resolve(__dirname, "resources")
     ]
   },
+
+  plugins: [
+    new SWPrecacheWebpackPlugin({
+      cacheId: 'pwa',
+      filename: 'service-worker.js',
+      staticFileGlobs: ['public/**/*.{css,eot,svg,ttf,woff,woff2,js,html}'],
+      minify: true,
+      stripPrefix: 'public/',
+      handleFetch: true,
+      dynamicUrlToDependencies: {
+        '/': ['resources/views/layouts/app.blade.php'],
+        // '/articles': ['resources/views/article/index.blade.php']
+      },
+      staticFileGlobsIgnorePatterns: [/\.map$/, /mix-manifest\.json$/, /manifest\.json$/, /service-worker\.js$/],
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/fonts\.googleapis\.com\//,
+          handler: 'cacheFirst'
+        },
+        {
+          urlPattern: /^https:\/\/www\.thecocktaildb\.com\/images\/media\/drink\/(\w+)\.jpg/,
+          handler: 'cacheFirst'
+        }
+      ],
+      // importScripts: ['./js/push_message.js']
+    })
+  ]
 });
 
 let themes = [
   'resources/assets/sass/themes/default-theme.scss',
   'resources/assets/sass/themes/gray-theme.scss',
 ];
+
 
 themes.forEach((item) => {
   mix.sass(item, 'public/css/themes').version();

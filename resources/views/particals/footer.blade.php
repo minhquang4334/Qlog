@@ -1,15 +1,7 @@
 <footer id="footer" class="footer">
     <div class="container text-center">
         <div class="row padding-top-10">
-            <div class="col-md-8 offset-md-2 text-center d-flex">
-                <div class="redirect-article">
-                    <span>
-                        Previous:
-                    @if(isset($previousAticle))
-                        {{$previousAticle->title}}
-                    @endif
-                    </span>
-                </div>
+            <div class="col-md-2 offset-md-5 text-center">
                 <ul class="connect">
                     <li class="mx-2">
                         <a href="{{ url('/') }}">
@@ -31,15 +23,16 @@
                     </li>
                     @endif
                 </ul>
-                <div class="redirect-article">
+            </div>
+            @if(isset($nextArticle))
+                <div class="col-md-3 offset-md-1 redirect-article next-article">
                     <span>
                         Next:
-                        @if(isset($nextArticle))
-                            {{$nextArticle->title}}
-                        @endif
+
+                        {{$nextArticle->title}}
                     </span>
                 </div>
-            </div>
+            @endif
         </div>
     </div>
     {{--<div class="copy-right text-center">--}}
