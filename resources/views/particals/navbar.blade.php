@@ -26,17 +26,17 @@
         <div class="container-fluid">
             <div class="row font-size-16">
                 <div class="col-md-2 col-xs-2">
-                    <div id="colorlib-logo"><a href="index.html">Article.</a></div>
+                    <div id="colorlib-logo">Article.</div>
                 </div>
                 <div class="col-md-10 col-xs-10 text-right menu-1">
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active">Home</li>
                         <li class="">
-                            <a href="blog.html">Blog</a>
+                            Blog
                         </li>
-                        <li><a href="lifestyle.html">Lifestyle</a></li>
-                        <li><a href="travels.html">Travels</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li>Lifestyle</li>
+                        <li>Travels</li>
+                        <li>Gallery</li>
                     </ul>
                 </div>
             </div>
