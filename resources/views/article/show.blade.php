@@ -70,9 +70,9 @@
           let firstP = $('#first-p').find("p:first-child").first();
           firstP.addClass('first-p-element');
           let githubSource = document.createElement('script');
-          githubSource.src = 'https://gist.github.com/minhquang4334/599d93ba386cc89a7bd2984365f1e225.js';
-          let link = 'https://gist.github.com/minhquang4334/599d93ba386cc89a7bd2984365f1e225.js';
-          postscribe('#first-p','<script src=https://gist.github.com/minhquang4334/599d93ba386cc89a7bd2984365f1e225.js><\/script>')
+          //githubSource.src = 'https://gist.github.com/minhquang4334/599d93ba386cc89a7bd2984365f1e225.js';
+          //let link = 'https://gist.github.com/minhquang4334/599d93ba386cc89a7bd2984365f1e225.js';
+         // postscribe('#first-p','<script src=https://gist.github.com/minhquang4334/599d93ba386cc89a7bd2984365f1e225.js><\/script>')
         })
 
 
