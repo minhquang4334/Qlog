@@ -1,0 +1,16 @@
+{
+  "name": "Minh Quang Blo",
+  "short_name": "Qlog",
+  "theme_color": "#067390",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "images/icon",
+      "sizes": "144x144",
+      "type": "image/jpg"
+    }
+  ]
+}

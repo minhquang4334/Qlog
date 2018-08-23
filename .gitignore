@@ -8,6 +8,7 @@ Homestead.yaml
 /public/css
 /public/fonts
 /public/js
+/public/service-worker.js
 /public/mix-manifest.json
 npm-debug.log
 .DS_Store
