@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Repositories\ArticleRepository;
+use Illuminate\Support\Facades\View;
 
 class ArticleController extends Controller
 {
@@ -35,7 +36,12 @@ class ArticleController extends Controller
     public function show($slug)
     {
         $article = $this->article->getBySlug($slug);
-
+        $nextArticle = $this->article->getNextArticle($article->id);
+        $previousAticle = $this->article->getPreviousArticle($article->id);
+        View::share([
+            'previousAticle' => $previousAticle,
+            'nextArticle' => $nextArticle,
+            ]);
         return view('article.show', compact('article'));
     }
 }

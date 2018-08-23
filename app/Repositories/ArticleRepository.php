@@ -43,10 +43,15 @@ class ArticleRepository
                     ->orderBy($sortColumn, $sort)->paginate($number);
     }
 
-    /**
-     * Get latest articles
-     * @return collection
-     */
+    public function getNextArticle($id) {
+        $nextArticleId = Article::where('id', '>', $id)->min('id');
+        return Article::find($nextArticleId);
+    }
+
+    public function getPreviousArticle($id) {
+        $nextArticleId = Article::where('id', '<', $id)->max('id');
+        return Article::find($nextArticleId);
+    }
 
     public function getLatest() {
         $this->model = $this->checkAuthScope();

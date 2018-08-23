@@ -34,11 +34,11 @@
     <div id="app">
         @include('particals.navbar')
 
-        <div class="main d-flex">
-            <div class="col-md-7 col-sm-12 offset-md-1 col-lg-6 offset-lg-2 margin-right20">
+        <div class="main d-flex margin-bottom-80">
+            <div class="col-md-7 col-sm-12 offset-md-1 margin-right20">
                 @yield('content')
             </div>
-            <div class="col-md-3 col-sm-12 right-content col-lg-2">
+            <div class="col-md-3 col-sm-12 right-content">
                 @include('particals.rightnavbar')
             </div>
         </div>
@@ -104,6 +104,14 @@
           $('#navBar').css('top', '0')
         }
 
+        //check if scroll to bottom
+        let scrollHeight = $(document).height();
+        let scrollPosition = $(window).height() + $(window).scrollTop();
+        if (((scrollHeight - scrollPosition) >= 0) && ((scrollHeight - scrollPosition) <= 100)) {
+          $('footer').css('bottom', '0');
+        } else {
+          $('footer').css('bottom', '-100px');
+        }
         lastScrollTop = st;
       }
     </script>
