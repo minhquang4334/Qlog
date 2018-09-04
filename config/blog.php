@@ -55,11 +55,11 @@ return [
     'footer' => [
         'github' => [
             'open' => true,
-            'url'  => 'https://github.com/jcc',
+            'url'  => 'https://github.com/minhquang4334',
         ],
         'twitter' => [
             'open' => true,
-            'url'  => 'https://twitter.com/pigjian'
+            'url'  => 'https://twitter.com/minhquang4334'
         ],
         'meta' => 'Qlog created at 2018',
     ],

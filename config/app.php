@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APPLICATION_NAME') ?: 'PJ Blog',
+    'name' => env('APPLICATION_NAME') ?: 'Qlog',
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://pigjian.app'),
+    'url' => env('APP_URL', 'https://quanghm.me'),
 
     /*
     |--------------------------------------------------------------------------
@@ -77,8 +77,8 @@ return [
     |
     */
 
-    'locale' => env('LOCALE') ?: 'en',
-    'time_locale' => env('TIME_LOCALE') ?: 'en',
+    'locale' => env('LOCALE') ?: 'vi',
+    'time_locale' => env('TIME_LOCALE') ?: 'vi',
 
     /*
     |--------------------------------------------------------------------------
@@ -91,7 +91,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'vi',
 
     /*
     |--------------------------------------------------------------------------
