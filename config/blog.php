@@ -6,18 +6,18 @@ return [
     'mail_notification' => env('MAIL_NOTIFICATION') ?: false,
 
     // Default Avatar
-    'default_avatar' => env('DEFAULT_AVATAR') ?: '/images/default.png',
+    'default_avatar' => env('DEFAULT_AVATAR') ?: '/images/icon.jpg',
 
     // Default Icon
-    'default_icon' => env('DEFAULT_ICON') ?: '/images/favicon.ico',
+    'default_icon' => env('DEFAULT_ICON') ?: '/images/icon.jpg',
 
     // Color Theme
     'color_theme' => 'default-theme',
 
     // Meta
     'meta' => [
-        'keywords' => 'PJ Blog,blog,pigjian,laravel,vuejs',
-        'description' => 'Nothing is impossible in PJ Blog'
+        'keywords' => 'Qlog, MQblog, VueJsBlog',
+        'description' => 'Qlog impossible is possible'
     ],
 
     // Social Share
@@ -61,7 +61,7 @@ return [
             'open' => true,
             'url'  => 'https://twitter.com/pigjian'
         ],
-        'meta' => '© PJ Blog 2016. Powered By Jiajian Chan',
+        'meta' => 'Qlog created at 2018',
     ],
 
     'license' => '<br/>This article is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.',
