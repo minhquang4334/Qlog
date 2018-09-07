@@ -25,12 +25,6 @@ This Blog build with Laravel 5.6 + VueJs 2.0
 - XML PHP Extension
 - MySql 5.7+
 
-## Preview
-
-![New Blog](https://pigjian.com/uploads/post_img/2016-12-27/newblog1.jpeg)
-
-![New Blog](https://pigjian.com/uploads/post_img/2016-12-27/newblog2.jpeg)
-
 ## How to Install?
 
 ### 1. Clone the source code or create new project.
